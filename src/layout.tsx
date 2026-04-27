@@ -110,7 +110,7 @@ export function layout(title: string, body: string): string {
         <div class="footer__col">
           <h5>Contact</h5>
           <ul class="footer__links">
-            <li><a href="mailto:hello@kincolegacy.com">hello@kincolegacy.com</a></li>
+            <li><a href="mailto:operations@kincolegacygrp.com">operations@kincolegacygrp.com</a></li>
             <li><a href="tel:+14045550100">(404) 555-0100</a></li>
             <li style="color: var(--text-dim); font-size: 0.82rem; line-height: 1.7;">Atlanta, Georgia<br>Serving Downtown, Midtown,<br>Old Fourth Ward & Beyond</li>
           </ul>

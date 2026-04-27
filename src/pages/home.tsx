@@ -158,7 +158,6 @@ export function homePage(): string {
       <p>Whether you're visiting for a weekend, relocating for months, or housing a team — we have a space and a plan for you.</p>
       <div class="cta-banner__actions">
         <a href="/properties" class="btn btn--gold btn--lg">Browse Properties</a>
-        <a href="/contact" class="btn btn--outline-gold btn--lg">Get in Touch</a>
       </div>
     </div>
   </section>

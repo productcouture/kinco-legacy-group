@@ -21,9 +21,8 @@ export function homePage(): string {
         <div class="hero__actions">
           <a href="/properties" class="btn btn--gold btn--lg">View Properties</a>
           <a href="/corporate" class="btn btn--outline-gold btn--lg">Corporate Housing</a>
-          <a href="/owner-portal" class="btn btn--outline-white btn--lg" style="display:inline-flex;align-items:center;gap:8px;">${lockSvg} Owner Portal</a>
+          <a href="/owner-portal" class="btn btn--outline-white btn--lg" style="display:inline-flex;align-items:center;gap:8px;">${lockSvg} Owner</a>
         </div>
-        <div class="hero__divider"></div>
         <div class="hero__stats">
           <div class="hero__stat">
             <div class="hero__stat-num">5+</div>

@@ -25,7 +25,7 @@ export function layout(title: string, body: string): string {
       <!-- Logo -->
       <a href="/" class="nav__logo">
         <span class="nav__logo-name">KinCo Legacy Group</span>
-        <span class="nav__logo-sub">Atlanta Furnished Rentals</span>
+        <span class="nav__logo-sub">Atlanta</span>
       </a>
 
       <!-- Center Links -->

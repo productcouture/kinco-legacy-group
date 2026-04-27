@@ -2,8 +2,7 @@ export function homePage(): string {
   const starSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
   const checkSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`
   const plusSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>`
-  const arrowSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`
-  const lockSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`
+
   const personSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
 
   return `
@@ -21,7 +20,7 @@ export function homePage(): string {
         <div class="hero__actions">
           <a href="/properties" class="btn btn--gold btn--lg">View Properties</a>
           <a href="/corporate" class="btn btn--outline-gold btn--lg">Corporate Housing</a>
-          <a href="/owner-portal" class="btn btn--outline-white btn--lg" style="display:inline-flex;align-items:center;gap:8px;">${lockSvg} Owner</a>
+
         </div>
         <div class="hero__stats">
           <div class="hero__stat">
@@ -98,47 +97,6 @@ export function homePage(): string {
           </div>
           <h4>Built to Last</h4>
           <p>Multi-generational thinking. We grow purposefully — quality always before quantity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROPERTIES CTA STRIP -->
-  <section style="background:var(--beige-light);padding:80px 0;">
-    <div class="container">
-      <div style="text-align:center;" class="observe">
-        <div class="eyebrow" style="justify-content:center;margin-bottom:16px;color:var(--gold-dark);">Our Properties</div>
-        <h2 style="color:var(--text-dark);margin-bottom:16px;">Atlanta Furnished Rentals</h2>
-        <p style="color:#5A534E;max-width:480px;margin:0 auto 36px;font-size:0.95rem;">Hand-selected properties across Atlanta — each one clean, comfortable, and ready the moment you arrive.</p>
-        <a href="/properties" class="btn btn--gold btn--lg" style="display:inline-flex;align-items:center;gap:10px;">
-          View All Properties ${arrowSvg}
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- OWNER PORTAL CTA -->
-  <section class="owner-portal">
-    <div class="container">
-      <div class="owner-portal__inner">
-        <div class="owner-portal__visual">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80&auto=format&fit=crop" alt="Owner portal" class="owner-portal__img" />
-          <div class="owner-portal__img-overlay"></div>
-        </div>
-        <div class="owner-portal__content observe">
-          <div class="eyebrow" style="margin-bottom:20px;">Property Owners</div>
-          <h2>Owner Portal Access</h2>
-          <p style="margin-bottom:28px;">Manage your property, track earnings, review guest activity, and access reporting — all from a secure, private dashboard designed for KinCo property owners.</p>
-          <div class="owner-portal__features">
-            <div class="owner-portal__feature">${checkSvg} Real-time earnings &amp; booking overview</div>
-            <div class="owner-portal__feature">${checkSvg} Monthly statements &amp; financial reports</div>
-            <div class="owner-portal__feature">${checkSvg} Guest history &amp; stay summaries</div>
-            <div class="owner-portal__feature">${checkSvg} Maintenance requests &amp; property notes</div>
-          </div>
-          <div style="display:flex;gap:14px;flex-wrap:wrap;">
-            <a href="/owner-portal" class="btn btn--gold btn--lg" style="display:inline-flex;align-items:center;gap:9px;">${lockSvg} Access Owner Portal</a>
-            <a href="/contact" class="btn btn--outline-gold btn--lg">Partner With Us</a>
-          </div>
         </div>
       </div>
     </div>

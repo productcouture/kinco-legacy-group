@@ -90,24 +90,19 @@ export function layout(title: string, body: string): string {
         </div>
 
         <div class="footer__col">
-          <h5>Properties</h5>
+          <h5>Explore</h5>
           <ul class="footer__links">
-            <li><a href="/properties">All Listings</a></li>
-            <li><a href="/properties/artist-108">Artist 108 — 2BR Loft</a></li>
-            <li><a href="/properties/artist-216">Artist 216 — 2BR Suite</a></li>
-            <li><a href="/properties/midtown-2br">Midtown 2BR Apartment</a></li>
-            <li><a href="/properties/studio-suite">1BR Executive Suite</a></li>
-            <li><a href="/properties/family-home">4BR Family Home</a></li>
+            <li><a href="/properties">Our Properties</a></li>
+            <li><a href="/corporate">Corporate Housing</a></li>
+            <li><a href="/about">About KinCo</a></li>
+            <li><a href="/contact">Availability Inquiry</a></li>
           </ul>
         </div>
 
         <div class="footer__col">
-          <h5>Company</h5>
+          <h5>Owners</h5>
           <ul class="footer__links">
-            <li><a href="/about">About KinCo</a></li>
-            <li><a href="/corporate">Corporate Housing</a></li>
-            <li><a href="/owner-portal">Owner Portal</a></li>
-            <li><a href="/contact">Availability Inquiry</a></li>
+            <li><a href="/owner-portal" style="display:flex;align-items:center;gap:7px;"><svg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg> Owner Portal</a></li>
             <li><a href="/contact">Partner With Us</a></li>
           </ul>
         </div>

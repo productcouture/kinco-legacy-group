@@ -1386,62 +1386,237 @@ section { padding: 100px 0; }
 /* ================================================================
    RESPONSIVE
    ================================================================ */
+/* ================================================================
+   RESPONSIVE — 1200px (Large tablets / small desktops)
+   ================================================================ */
 @media (max-width: 1200px) {
   .why__grid { grid-template-columns: repeat(3, 1fr); }
   .why__item { border-bottom: 1px solid var(--border-gold); }
   .why__item:nth-child(3) { border-right: none; }
-  .footer__inner { grid-template-columns: 1fr 1fr; }
+  .footer__inner { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
+
+/* ================================================================
+   RESPONSIVE — 1024px (Tablets landscape)
+   ================================================================ */
 @media (max-width: 1024px) {
+  h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+
+  /* Hero */
   .hero { grid-template-columns: 1fr; }
-  .hero__right { height: 60vw; min-height: 380px; }
-  .hero__left { padding: 64px 40px; }
+  .hero__right { height: 55vw; min-height: 360px; order: -1; }
+  .hero__left { padding: 56px 48px; }
   .hero__left::after { display: none; }
+  .hero__left-inner { max-width: 100%; }
+
+  /* Why grid */
+  .why__grid { grid-template-columns: repeat(3, 1fr); }
+  .why__item:nth-child(3) { border-right: none; }
+  .why__item:nth-child(4),
+  .why__item:nth-child(5),
+  .why__item:nth-child(6) { border-bottom: none; }
+
+  /* Properties */
   .properties__grid { grid-template-columns: repeat(2, 1fr); }
-  .owner-portal__inner { grid-template-columns: 1fr; }
-  .owner-portal__visual { display: none; }
-  .testimonials__grid { grid-template-columns: 1fr 1fr; }
-  .neighborhood__grid { grid-template-columns: repeat(2, 1fr); }
-  .contact__inner { grid-template-columns: 1fr; }
-  .about__story { grid-template-columns: 1fr; }
+  .properties__row2 { grid-template-columns: 1fr 1fr; }
+
+  /* About */
+  .about__story { grid-template-columns: 1fr; gap: 40px; }
+  .about__story-img { height: 340px; }
+  .about__values { grid-template-columns: repeat(2, 1fr); }
+
+  /* Corporate */
   .corporate-page__features { grid-template-columns: 1fr 1fr; }
+  .corporate-page__process { grid-template-columns: repeat(2, 1fr); }
+  .corporate-page__process::before { display: none; }
+
+  /* Contact */
+  .contact__inner { grid-template-columns: 1fr; gap: 48px; }
+
+  /* Property detail */
   .property-detail__inner { grid-template-columns: 1fr; }
-  .booking-sidebar { position: static; }
-  .property-gallery { grid-template-columns: 1fr; grid-template-rows: 360px; }
+  .booking-sidebar { position: static; margin-top: 32px; }
+  .property-gallery { grid-template-columns: 1fr; grid-template-rows: 340px; }
   .property-gallery__thumb { display: none; }
   .property-gallery__main { grid-row: 1; }
+  .property-detail__amenities-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Neighborhood */
+  .neighborhood__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Owner portal */
+  .owner-portal__inner { grid-template-columns: 1fr; }
+  .owner-portal__visual { display: none; }
 }
+
+/* ================================================================
+   RESPONSIVE — 768px (Tablets portrait / large phones)
+   ================================================================ */
 @media (max-width: 768px) {
-  section { padding: 72px 0; }
-  .nav__links { display: none; }
-  .nav__cta .nav__portal { display: none; }
-  .nav__hamburger { display: flex; }
-  .hero__left { padding: 48px 24px; }
-  .hero__actions { flex-direction: column; align-items: flex-start; }
-  .hero__stats { gap: 24px; flex-wrap: wrap; }
-  .why__grid { grid-template-columns: repeat(2, 1fr); }
-  .why__item:nth-child(2) { border-right: none; }
-  .properties__grid { grid-template-columns: 1fr; }
-  .properties__row2 { grid-template-columns: 1fr; }
-  .testimonials__grid { grid-template-columns: 1fr; }
-  .neighborhood__grid { grid-template-columns: 1fr 1fr; }
-  .about__values { grid-template-columns: 1fr; }
-  .corporate-page__features { grid-template-columns: 1fr; }
-  .corporate-page__process { grid-template-columns: 1fr 1fr; }
-  .corporate-page__process::before { display: none; }
-  .footer__inner { grid-template-columns: 1fr; gap: 32px; }
-  .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .form__row { grid-template-columns: 1fr; }
-  .property-detail__amenities-grid { grid-template-columns: 1fr 1fr; }
-  .good-for-grid { grid-template-columns: 1fr; }
+  section { padding: 64px 0; }
   .container { padding: 0 20px; }
   .nav__inner { padding: 0 20px; }
+
+  /* Nav */
+  .nav__links { display: none; }
+  .nav__cta { gap: 12px; }
+  .nav__hamburger { display: flex; }
+  .btn-nav { padding: 10px 18px; font-size: 0.62rem; }
+
+  /* Hero */
+  .hero__right { height: 52vw; min-height: 280px; }
+  .hero__left { padding: 44px 20px 52px; }
+  .hero__headline { font-size: clamp(2.2rem, 7vw, 3.2rem); margin-bottom: 20px; }
+  .hero__sub { font-size: 0.92rem; margin-bottom: 32px; }
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  .hero__stats { gap: 20px; flex-wrap: wrap; margin-top: 32px; }
+  .hero__stat-num { font-size: 1.6rem; }
+  .hero__img-caption { display: none; }
+
+  /* Why */
+  .why__grid { grid-template-columns: repeat(2, 1fr); }
+  .why__item { padding: 28px 18px; }
+  .why__item:nth-child(2) { border-right: none; }
+  .why__item:nth-child(3) { border-right: 1px solid var(--border-gold); }
+  .why__item:nth-child(4) { border-right: none; }
+  .why__item:nth-child(5) { border-right: 1px solid var(--border-gold); }
+  .why__item:nth-child(1),
+  .why__item:nth-child(2),
+  .why__item:nth-child(3),
+  .why__item:nth-child(4) { border-bottom: 1px solid var(--border-gold); }
+  .why__item:nth-child(5),
+  .why__item:nth-child(6) { border-bottom: none; }
+
+  /* Page hero */
+  .page-hero { padding: 120px 20px 60px; }
+  .page-hero h1 { font-size: clamp(2rem, 6vw, 3rem); }
+
+  /* Properties */
+  .properties__grid { grid-template-columns: 1fr; }
+  .properties__row2 { grid-template-columns: 1fr; }
+  .property-card__img-wrap { height: 200px; }
+
+  /* About */
+  .about__values { grid-template-columns: 1fr; gap: 14px; }
+  .about__story-img { height: 260px; }
+
+  /* Corporate */
+  .corporate-page__features { grid-template-columns: 1fr; }
+  .corporate-page__process { grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  /* Neighborhood */
+  .neighborhood__grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .neighborhood__card { height: 220px; }
+
+  /* FAQ */
+  .faq__list { max-width: 100%; }
+  .faq__question { font-size: 0.85rem; }
+
+  /* CTA Banner */
+  .cta-banner { padding: 72px 20px; }
+  .cta-banner h2 { font-size: clamp(1.6rem, 5vw, 2.4rem); }
+  .cta-banner__actions { flex-direction: column; align-items: center; gap: 12px; }
+  .cta-banner__actions .btn { width: 100%; max-width: 320px; justify-content: center; }
+
+  /* Contact form */
+  .form { padding: 28px 20px; }
+  .form__row { grid-template-columns: 1fr; }
+
+  /* Property detail */
+  .property-gallery { grid-template-rows: 260px; }
+  .property-detail__amenities-grid { grid-template-columns: 1fr 1fr; }
+  .good-for-grid { grid-template-columns: 1fr; }
+  .property-detail__meta { flex-wrap: wrap; gap: 14px; }
+  .booking-sidebar { padding: 24px 18px; }
+
+  /* Footer */
+  .footer { padding: 52px 0 28px; }
+  .footer__inner { grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 36px; }
+  .footer__brand { grid-column: 1 / -1; }
+  .footer__brand p { max-width: 100%; }
+  .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .footer__bottom-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+
+  /* Section header */
+  .section-header { margin-bottom: 44px; }
+  .section-header h2 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
 }
+
+/* ================================================================
+   RESPONSIVE — 480px (Mobile phones)
+   ================================================================ */
 @media (max-width: 480px) {
-  .why__grid { grid-template-columns: 1fr; }
-  .why__item { border-right: none; }
-  .neighborhood__grid { grid-template-columns: 1fr; }
-  .hero__stats { gap: 20px; }
+  section { padding: 52px 0; }
+  .container { padding: 0 16px; }
+  .nav__inner { padding: 0 16px; }
+  .nav__mobile { padding: 16px 16px 24px; }
+
+  /* Hero */
+  .hero__right { height: 60vw; min-height: 240px; }
+  .hero__left { padding: 36px 16px 44px; }
+  .hero__headline { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  .hero__sub { font-size: 0.88rem; }
+  .hero__stats { gap: 16px; }
+  .hero__stat-num { font-size: 1.4rem; }
+
+  /* Why */
+  .why__grid { grid-template-columns: 1fr; border: none; }
+  .why__item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-gold) !important;
+    border-left: 1px solid var(--border-gold);
+    border-right: 1px solid var(--border-gold);
+  }
+  .why__grid { border: 1px solid var(--border-gold); border-radius: var(--radius-md); overflow: hidden; }
+  .why__item:last-child { border-bottom: none !important; }
+  .why__item { padding: 24px 20px; }
+
+  /* Page hero */
+  .page-hero { padding: 110px 16px 52px; }
+
+  /* About */
+  .about__story-img { height: 220px; }
+  .about__value { padding: 24px 18px; }
+
+  /* Corporate */
   .corporate-page__process { grid-template-columns: 1fr; }
-  .property-detail__meta { flex-direction: column; gap: 12px; }
+  .corporate-page__features { gap: 14px; }
+
+  /* Neighborhood */
+  .neighborhood__grid { grid-template-columns: 1fr; }
+  .neighborhood__card { height: 200px; }
+
+  /* Testimonials */
+  .testimonial-card { padding: 24px 20px; }
+
+  /* Property detail */
+  .property-gallery { grid-template-rows: 220px; }
+  .property-detail__meta { flex-direction: column; gap: 10px; }
+  .property-detail__amenities-grid { grid-template-columns: 1fr; }
+  .booking-sidebar__price { font-size: 1.8rem; }
+
+  /* Contact */
+  .contact__detail-icon { width: 36px; height: 36px; }
+  .form { padding: 24px 16px; }
+
+  /* Footer */
+  .footer__inner { grid-template-columns: 1fr; gap: 24px; }
+  .footer__brand { grid-column: auto; }
+  .footer__bottom-links { flex-direction: column; gap: 8px; }
+
+  /* Buttons */
+  .btn--lg { padding: 16px 28px; font-size: 0.7rem; }
+  .btn-nav { display: none; }
+
+  /* FAQ */
+  .faq__question { font-size: 0.82rem; padding: 20px 0; }
+
+  /* Section header */
+  .section-header { margin-bottom: 36px; }
 }

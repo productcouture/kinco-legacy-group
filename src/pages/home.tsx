@@ -6,39 +6,6 @@ export function homePage(): string {
   const lockSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`
   const personSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
 
-  function propCard(id: string, badge: string, location: string, title: string, beds: number, baths: number, sleeps: number, price: number, img: string) {
-    return `
-    <div class="property-card">
-      <div class="property-card__img-wrap">
-        <img src="${img}" alt="${title}" class="property-card__img" loading="lazy" />
-        ${badge ? `<span class="property-card__badge">${badge}</span>` : ''}
-      </div>
-      <div class="property-card__body">
-        <div class="property-card__location">${location}</div>
-        <h3 class="property-card__title">${title}</h3>
-        <div class="property-card__meta">
-          <span class="property-card__meta-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-            ${beds} Bed${beds !== 1 ? 's' : ''}
-          </span>
-          <span class="property-card__meta-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>
-            ${baths} Bath${baths !== 1 ? 's' : ''}
-          </span>
-          <span class="property-card__meta-item">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Sleeps ${sleeps}
-          </span>
-        </div>
-        <div class="property-card__divider"></div>
-        <div class="property-card__footer">
-          <div class="property-card__price">$${price} <span>/ night</span></div>
-          <a href="/properties/${id}" class="btn btn--dark-gold btn--sm">View Details</a>
-        </div>
-      </div>
-    </div>`
-  }
-
   return `
 
   <!-- HERO -->
@@ -137,28 +104,14 @@ export function homePage(): string {
     </div>
   </section>
 
-  <!-- PROPERTIES -->
-  <section class="properties">
+  <!-- PROPERTIES CTA STRIP -->
+  <section style="background:var(--beige-light);padding:80px 0;">
     <div class="container">
-      <div class="properties__header observe">
-        <div class="eyebrow" style="justify-content:center;margin-bottom:16px;">Our Properties</div>
-        <h2>Atlanta Furnished Rentals</h2>
-        <p style="color:var(--text-muted);max-width:480px;margin:12px auto 0;font-size:0.92rem;">Hand-selected properties across Atlanta — each one clean, comfortable, and ready the moment you arrive.</p>
-      </div>
-
-      <div class="properties__grid observe">
-        ${propCard('artist-108','Featured','Artist Square · Downtown','Artist 108',2,2,6,165,'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=700&q=80&auto=format&fit=crop')}
-        ${propCard('artist-216','Popular','Artist Square · Downtown','Artist 216',2,2,6,155,'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=80&auto=format&fit=crop')}
-        ${propCard('midtown-2br','','Midtown Atlanta','Midtown 2BR Apartment',2,2,5,145,'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=700&q=80&auto=format&fit=crop')}
-      </div>
-
-      <div class="properties__row2 observe">
-        ${propCard('studio-suite','','Downtown / Old Fourth Ward','1-Bedroom Executive Suite',1,1,2,99,'https://images.unsplash.com/photo-1540518614846-7eded433c457?w=900&q=80&auto=format&fit=crop')}
-        ${propCard('family-home','Groups','Atlanta Metro','4-Bedroom Family Home',4,3,10,280,'https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=900&q=80&auto=format&fit=crop')}
-      </div>
-
-      <div style="text-align:center;margin-top:52px;" class="observe">
-        <a href="/properties" class="btn btn--outline-gold btn--lg" style="display:inline-flex;align-items:center;gap:10px;">
+      <div style="text-align:center;" class="observe">
+        <div class="eyebrow" style="justify-content:center;margin-bottom:16px;color:var(--gold-dark);">Our Properties</div>
+        <h2 style="color:var(--text-dark);margin-bottom:16px;">Atlanta Furnished Rentals</h2>
+        <p style="color:#5A534E;max-width:480px;margin:0 auto 36px;font-size:0.95rem;">Hand-selected properties across Atlanta — each one clean, comfortable, and ready the moment you arrive.</p>
+        <a href="/properties" class="btn btn--gold btn--lg" style="display:inline-flex;align-items:center;gap:10px;">
           View All Properties ${arrowSvg}
         </a>
       </div>

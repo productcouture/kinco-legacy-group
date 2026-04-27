@@ -58,7 +58,6 @@ export function layout(title: string, body: string): string {
       <a href="/properties">Properties</a>
       <a href="/corporate">Corporate Housing</a>
       <a href="/about">About</a>
-      <a href="/owner-portal">Owner Portal</a>
       <a href="/contact">Contact</a>
       <a href="/contact" style="color: var(--gold); margin-top: 8px;">Book a Stay →</a>
     </div>

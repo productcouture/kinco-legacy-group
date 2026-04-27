@@ -24,6 +24,9 @@ app.get('/corporate', (c) => c.html(layout('Corporate Housing Atlanta | KinCo Le
 app.get('/about', (c) => c.html(layout('About | KinCo Legacy Group', aboutPage())))
 app.get('/contact', (c) => c.html(layout('Contact | KinCo Legacy Group', contactPage())))
 
+// Owner Portal — redirect to Lovable app
+app.get('/owner-portal', (c) => c.redirect('https://kinco-insight-hub.lovable.app', 301))
+
 // Form submission (demo)
 app.post('/api/inquire', async (c) => {
   const data = await c.req.json().catch(() => ({}))

@@ -1,9 +1,6 @@
 export function homePage(): string {
-  const starSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="var(--gold)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
   const checkSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`
   const plusSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>`
-
-  const personSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`
 
   return `
 
@@ -102,54 +99,7 @@ export function homePage(): string {
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-header observe">
-        <div class="eyebrow" style="justify-content:center;margin-bottom:16px;">Guest Reviews</div>
-        <h2>What Our Guests Say</h2>
-        <p>Honest words from the people who've stayed with us.</p>
-      </div>
-      <div class="testimonials__grid observe">
-        <div class="testimonial-card">
-          <span class="testimonial-card__quote-mark">"</span>
-          <div class="testimonial-card__stars">${starSvg}${starSvg}${starSvg}${starSvg}${starSvg}</div>
-          <p class="testimonial-card__text">The space was immaculate, beautifully furnished, and felt completely personal — nothing like a generic rental. I've stayed in hotels that weren't this well thought out. Will absolutely be back.</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">${personSvg}</div>
-            <div>
-              <div class="testimonial-card__name">Marcus T.</div>
-              <div class="testimonial-card__role">Corporate Traveler · 3-week stay</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <span class="testimonial-card__quote-mark">"</span>
-          <div class="testimonial-card__stars">${starSvg}${starSvg}${starSvg}${starSvg}${starSvg}</div>
-          <p class="testimonial-card__text">We relocated for work and KinCo made the entire transition seamless. The apartment was fully stocked, the location was perfect, and communication was responsive throughout our two-month stay.</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">${personSvg}</div>
-            <div>
-              <div class="testimonial-card__name">Danielle &amp; Kwame R.</div>
-              <div class="testimonial-card__role">Relocation Stay · 2 months</div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <span class="testimonial-card__quote-mark">"</span>
-          <div class="testimonial-card__stars">${starSvg}${starSvg}${starSvg}${starSvg}${starSvg}</div>
-          <p class="testimonial-card__text">Booked the loft for an extended nursing contract. It felt like home from day one — stylish, practical, well-located. The family behind KinCo genuinely cares, and that shows in every detail.</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">${personSvg}</div>
-            <div>
-              <div class="testimonial-card__name">Priya S.</div>
-              <div class="testimonial-card__role">Traveling Nurse · 6-week stay</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- NEIGHBORHOOD -->
   <section class="neighborhood">
